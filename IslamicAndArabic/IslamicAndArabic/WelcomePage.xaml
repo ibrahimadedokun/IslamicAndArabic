@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:IslamicAndArabic.MarkupExtensions"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.WelcomePage"
+             Padding="0,20,0,0"
+             Title="Islamic and Arabic Learning Hub">
+    
+    <RelativeLayout Margin="10">        
+
+        <Image 
+            x:Name="bgTrans"  Aspect="AspectFit" Opacity="0.1"
+            Source="{local:EmbeddedImage IslamicAndArabic.images.transparentIslamicLogo.png}"
+                 RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height, Factor=0.25}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height, Factor=0.5}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width, Factor=1}">            
+        </Image>
+    </RelativeLayout>
+
+</ContentPage>

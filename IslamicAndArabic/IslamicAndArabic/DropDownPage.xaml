@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:IslamicAndArabic.MarkupExtensions"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.DropDownPage"
+             Title="Contents"
+             Padding="0,20,0,0">
+    <RelativeLayout>
+        <StackLayout 
+             x:Name="sl" Margin="15" Spacing="0" RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent, 
+            Property=Width, 
+            Factor=1}">
+
+            <ScrollView >
+                <StackLayout>
+                    <StackLayout>
+                        <Button x:Name="firstButton" Text="First Button" Clicked="firstButton_Clicked" TextColor="Wheat"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="30" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <StackLayout x:Name="firstStackOne" HeightRequest="35" BackgroundColor="Wheat"
+                             Orientation="Horizontal" IsVisible="False">
+                        <Label Margin="10,0,0,0" TextColor="#795548" Text="First Child One" 
+                           FontSize="Medium" FontAttributes="Bold" 
+                           HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Image Source="{local:EmbeddedImage IslamicAndArabic.images.right_arrow.png}"/>
+                    </StackLayout>
+                    <StackLayout x:Name="firstStackTwo" HeightRequest="35" BackgroundColor="Wheat"
+                             Orientation="Horizontal" IsVisible="False">
+                        <Label Margin="10,0,0,0" TextColor="#795548" Text="First Child Two" 
+                           FontSize="Medium" FontAttributes="Bold" 
+                           HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Image Source="{local:EmbeddedImage IslamicAndArabic.images.right_arrow.png}"/>
+                    </StackLayout>
+                    <StackLayout x:Name="firstStackThree" HeightRequest="35" BackgroundColor="Wheat" 
+                             Orientation="Horizontal" IsVisible="False">
+                        <Label Margin="10,0,0,0" TextColor="#795548" Text="First Child Three" 
+                           FontSize="Medium" FontAttributes="Bold" 
+                           HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Image Source="{local:EmbeddedImage IslamicAndArabic.images.right_arrow.png}"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <Image 
+            x:Name="bgTrans"  Aspect="AspectFit" Opacity="0.1"
+            Source="{local:EmbeddedImage IslamicAndArabic.images.transparentIslamicLogo.png}"
+                 RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height, Factor=0.25}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height, Factor=0.5}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width, Factor=1}">
+        </Image>
+
+    </RelativeLayout>
+
+</ContentPage>
