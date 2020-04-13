@@ -11,6 +11,7 @@
              Padding="0,20,0,0">
     
     <RelativeLayout>
+        <myLocal:BackgroundImage/>
         <ScrollView>
             <StackLayout 
              x:Name="sl" Margin="15" Spacing="0" RelativeLayout.WidthConstraint="{ConstraintExpression
@@ -20,38 +21,86 @@
 
                 <StackLayout>
 
-                    <!--First Division-->
+                    <!--#region First Division-->
                     <StackLayout>
-                        <Button x:Name="firstButton" Text="Definition of Sawm" Clicked="firstButton_Clicked" TextColor="Wheat"
+                        <Button x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" TextColor="Wheat"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
-                    <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Start Time and End" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="firstStackTwo" TabDescription="Intention" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="firstStackThree" TabDescription="Benefits of Fasting" IsVisible="False" />
-
-                    <!--Second Division-->
+                    <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Definition" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="firstOne" Tapped="firstOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="firstStackTwo" TabDescription="Start Time and End" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="firstTwo" Tapped="firstTwo_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="firstStackThree" TabDescription="Intention" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="firstThree" Tapped="firstThree_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="firstStackFour" TabDescription="Benefits of Fasting" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="firstFour" Tapped="firstFour_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <!--#endregion-->
+                    
+                    <!--#region Second Division-->
                     <StackLayout>
                         <Button x:Name="secondButton" Text="Types of Sawm" TextColor="Wheat" Clicked="secondButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
-                    <myLocal:MyStackLayout x:Name="secondStackOne" TabDescription="Classification" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="secondStackTwo" TabDescription="Example of Voluntary" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="secondStackThree" TabDescription="Ramadan" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="secondStackFour" TabDescription="Benefits of Ramadan" IsVisible="False" />
-
-                    <!--Third Division-->
+                    <myLocal:MyStackLayout x:Name="secondStackOne" TabDescription="Classification" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="secondOne" Tapped="secondOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="secondStackTwo" TabDescription="Example of Voluntary" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="secondTwo" Tapped="secondTwo_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="secondStackThree" TabDescription="Ramadan" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="secondThree" Tapped="secondThree_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="secondStackFour" TabDescription="Benefits of Ramadan" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="secondFour" Tapped="secondFour_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <!--#endregion-->
+                    
+                    <!--#region Third Division-->
                     <StackLayout>
                         <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" TextColor="Wheat" Clicked="thirdButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
-                    <myLocal:MyStackLayout x:Name="thirdStackOne" TabDescription="Repay" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="thirdStackTwo" TabDescription="Pay by other Means" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="thirdStackThree" TabDescription="Never Repay" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="thirdStackOne" TabDescription="Repay" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="thirdOne" Tapped="thirdOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="thirdStackTwo" TabDescription="Pay by other Means" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="thirdTwo" Tapped="thirdTwo_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="thirdStackThree" TabDescription="Never Repay" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="thirdThree" Tapped="thirdThree_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <!--#endregion-->
 
-                    <!--Fourth Division-->
+                    <!--#region Fourth Division-->
                     <StackLayout>
                         <Button x:Name="fourthButton" Text="Days Not to Fast Voluntarily" TextColor="Wheat" Clicked="fourthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
@@ -62,29 +111,69 @@
                             <TapGestureRecognizer x:Name="fourthOne" Tapped="fourthOne_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-
-                    <!--Fifth Division-->
+                    <!--#endregion-->
+                    
+                    <!--#region Fifth Division-->
                     <StackLayout>
                         <Button x:Name="fifthButton" Text="Invalidation of Sawm" TextColor="Wheat" Clicked="fifthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
-                    <myLocal:MyStackLayout x:Name="fifthStackOne" TabDescription="Things that Invalidate Sawm" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="fifthStackTwo" TabDescription="Things that Don't Invalidate Sawm" IsVisible="False" />
-
-                    <!--Sixth Division-->
+                    <myLocal:MyStackLayout x:Name="fifthStackOne" TabDescription="Things that Invalidate Sawm" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="fifthOne" Tapped="fifthOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <myLocal:MyStackLayout x:Name="fifthStackTwo" TabDescription="Things that Don't Invalidate Sawm" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="fifthTwo" Tapped="fifthTwo_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <!--#endregion-->
+                    
+                    <!--#region Sixth Division-->
                     <StackLayout>
                         <Button x:Name="sixthButton" Text="Good deeds in Ramadan" TextColor="Wheat" Clicked="sixthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
-                    <myLocal:MyStackLayout x:Name="sixthStackOne" TabDescription="Qur'an" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="sixthStackTwo" TabDescription="Tafsir" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="sixthStackThree" TabDescription="Remembrance" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="sixthStackFour" TabDescription="Taraweeh" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="sixthStackFive" TabDescription="Night of Majesty" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="sixthStackSix" TabDescription="Last 10 Days" IsVisible="False" />
-
+                    <myLocal:MyStackLayout x:Name="sixthStackOne" TabDescription="Qur'an" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthOne" Tapped="sixthOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    
+                    <myLocal:MyStackLayout x:Name="sixthStackTwo" TabDescription="Tafsir" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthTwo" Tapped="sixthTwo_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    
+                    <myLocal:MyStackLayout x:Name="sixthStackThree" TabDescription="Remembrance" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthThree" Tapped="sixthThree_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    
+                    <myLocal:MyStackLayout x:Name="sixthStackFour" TabDescription="Taraweeh" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthFour" Tapped="sixthFour_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    
+                    <myLocal:MyStackLayout x:Name="sixthStackFive" TabDescription="Night of Majesty" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthFive" Tapped="sixthFive_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    
+                    <myLocal:MyStackLayout x:Name="sixthStackSix" TabDescription="Last 10 Days" IsVisible="False" >
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="sixthSix" Tapped="sixthSix_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+                    <!--#endregion -->
+                    
                 </StackLayout>
                 
             </StackLayout>

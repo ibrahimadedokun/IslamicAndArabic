@@ -132,5 +132,100 @@ namespace IslamicAndArabic
         {
             await Navigation.PushAsync(new Page());
         }
+
+        async private void fifthOne_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void fifthTwo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthOne_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthTwo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthThree_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthFour_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthFive_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void sixthSix_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void thirdOne_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void thirdTwo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void thirdThree_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void firstOne_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void firstTwo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void firstThree_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void secondOne_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void secondTwo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void secondThree_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        async private void secondFour_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
+        }
+
+        private void firstFour_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }
