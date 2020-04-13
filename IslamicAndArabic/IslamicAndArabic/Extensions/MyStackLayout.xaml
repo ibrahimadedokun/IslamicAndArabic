@@ -9,6 +9,7 @@
              x:Class="IslamicAndArabic.Extensions.MyStackLayout"
              x:Name="myStackDefault" HeightRequest="35" BackgroundColor="Wheat"
              Orientation="Horizontal">
+    
 
     <Label Margin="10,0,0,0" TextColor="#795548" Text="{Binding TabDescription}" 
                            FontSize="Medium" FontAttributes="Bold" 

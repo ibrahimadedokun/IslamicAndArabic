@@ -9,30 +9,91 @@
              x:Class="IslamicAndArabic.DropDownPage"
              Title="Contents"
              Padding="0,20,0,0">
+    
     <RelativeLayout>
-        <StackLayout 
+        <ScrollView>
+            <StackLayout 
              x:Name="sl" Margin="15" Spacing="0" RelativeLayout.WidthConstraint="{ConstraintExpression
             Type=RelativeToParent, 
             Property=Width, 
             Factor=1}">
 
-            <ScrollView >
                 <StackLayout>
+
+                    <!--First Division-->
                     <StackLayout>
-                        <Button x:Name="firstButton" Text="First Button" Clicked="firstButton_Clicked" TextColor="Wheat"
+                        <Button x:Name="firstButton" Text="Definition of Sawm" Clicked="firstButton_Clicked" TextColor="Wheat"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
                             CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
-                    </StackLayout>                                        
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Start Time and End" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="firstStackTwo" TabDescription="Intention" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="firstStackThree" TabDescription="Benefits of Fasting" IsVisible="False" />
 
-                    <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="First Child" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="firstStackTwo" TabDescription="Second Child" IsVisible="False" />
-                    <myLocal:MyStackLayout x:Name="firstStackThree" TabDescription="Third Child" IsVisible="False" />
+                    <!--Second Division-->
+                    <StackLayout>
+                        <Button x:Name="secondButton" Text="Types of Sawm" TextColor="Wheat" Clicked="secondButton_Clicked"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="secondStackOne" TabDescription="Classification" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="secondStackTwo" TabDescription="Example of Voluntary" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="secondStackThree" TabDescription="Ramadan" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="secondStackFour" TabDescription="Benefits of Ramadan" IsVisible="False" />
+
+                    <!--Third Division-->
+                    <StackLayout>
+                        <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" TextColor="Wheat" Clicked="thirdButton_Clicked"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="thirdStackOne" TabDescription="Repay" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="thirdStackTwo" TabDescription="Pay by other Means" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="thirdStackThree" TabDescription="Never Repay" IsVisible="False" />
+
+                    <!--Fourth Division-->
+                    <StackLayout>
+                        <Button x:Name="fourthButton" Text="Days Not to Fast Voluntarily" TextColor="Wheat" Clicked="fourthButton_Clicked"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="fourthStackOne" TabDescription="Days Not to Fast Voluntarily" IsVisible="False">
+                        <myLocal:MyStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="fourthOne" Tapped="fourthOne_Tapped"/>
+                        </myLocal:MyStackLayout.GestureRecognizers>
+                    </myLocal:MyStackLayout>
+
+                    <!--Fifth Division-->
+                    <StackLayout>
+                        <Button x:Name="fifthButton" Text="Invalidation of Sawm" TextColor="Wheat" Clicked="fifthButton_Clicked"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="fifthStackOne" TabDescription="Things that Invalidate Sawm" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="fifthStackTwo" TabDescription="Things that Don't Invalidate Sawm" IsVisible="False" />
+
+                    <!--Sixth Division-->
+                    <StackLayout>
+                        <Button x:Name="sixthButton" Text="Good deeds in Ramadan" TextColor="Wheat" Clicked="sixthButton_Clicked"
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                    </StackLayout>
+                    <myLocal:MyStackLayout x:Name="sixthStackOne" TabDescription="Qur'an" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="sixthStackTwo" TabDescription="Tafsir" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="sixthStackThree" TabDescription="Remembrance" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="sixthStackFour" TabDescription="Taraweeh" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="sixthStackFive" TabDescription="Night of Majesty" IsVisible="False" />
+                    <myLocal:MyStackLayout x:Name="sixthStackSix" TabDescription="Last 10 Days" IsVisible="False" />
 
                 </StackLayout>
-            </ScrollView>
-        </StackLayout>        
+                
+            </StackLayout>
 
+        </ScrollView>               
+
+        <!--
         <myLocal:BackgroundImage />
+        -->        
 
     </RelativeLayout>
 
