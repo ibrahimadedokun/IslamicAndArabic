@@ -20,7 +20,7 @@
                     <StackLayout>
                         <Button x:Name="firstButton" Text="First Button" Clicked="firstButton_Clicked" TextColor="Wheat"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="30" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
                     </StackLayout>
                     <StackLayout x:Name="firstStackOne" HeightRequest="35" BackgroundColor="Wheat"
                              Orientation="Horizontal" IsVisible="False">

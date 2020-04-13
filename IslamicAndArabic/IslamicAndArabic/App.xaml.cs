@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IslamicAndArabic.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace IslamicAndArabic
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DropDownPage());
+            MainPage = new NavigationPage(new SplashScreen());
         }
 
         protected override void OnStart()
