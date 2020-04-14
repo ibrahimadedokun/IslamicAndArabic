@@ -10,17 +10,18 @@
              Title="Contents"
              Padding="0,20,0,0">
     
-    <RelativeLayout>
-        <myLocal:BackgroundImage/>
-        <ScrollView>
-            <StackLayout 
-             x:Name="sl" Margin="15" Spacing="0" RelativeLayout.WidthConstraint="{ConstraintExpression
-            Type=RelativeToParent, 
-            Property=Width, 
-            Factor=1}">
+    <RelativeLayout >
+        
+        <myLocal:BackgroundImage/>              
 
-                <StackLayout>
-
+        <ScrollView 
+            Padding="20,0,20,20"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height}">
+            
+            <StackLayout>
+                
                     <!--#region First Division-->
                     <StackLayout>
                         <Button x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" TextColor="Wheat"
@@ -48,7 +49,7 @@
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
                     <!--#endregion-->
-                    
+
                     <!--#region Second Division-->
                     <StackLayout>
                         <Button x:Name="secondButton" Text="Types of Sawm" TextColor="Wheat" Clicked="secondButton_Clicked"
@@ -76,7 +77,7 @@
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
                     <!--#endregion-->
-                    
+
                     <!--#region Third Division-->
                     <StackLayout>
                         <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" TextColor="Wheat" Clicked="thirdButton_Clicked"
@@ -112,7 +113,7 @@
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
                     <!--#endregion-->
-                    
+
                     <!--#region Fifth Division-->
                     <StackLayout>
                         <Button x:Name="fifthButton" Text="Invalidation of Sawm" TextColor="Wheat" Clicked="fifthButton_Clicked"
@@ -130,7 +131,7 @@
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
                     <!--#endregion-->
-                    
+
                     <!--#region Sixth Division-->
                     <StackLayout>
                         <Button x:Name="sixthButton" Text="Good deeds in Ramadan" TextColor="Wheat" Clicked="sixthButton_Clicked"
@@ -142,47 +143,42 @@
                             <TapGestureRecognizer x:Name="sixthOne" Tapped="sixthOne_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    
+
                     <myLocal:MyStackLayout x:Name="sixthStackTwo" TabDescription="Tafsir" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="sixthTwo" Tapped="sixthTwo_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    
+
                     <myLocal:MyStackLayout x:Name="sixthStackThree" TabDescription="Remembrance" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="sixthThree" Tapped="sixthThree_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    
+
                     <myLocal:MyStackLayout x:Name="sixthStackFour" TabDescription="Taraweeh" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="sixthFour" Tapped="sixthFour_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    
+
                     <myLocal:MyStackLayout x:Name="sixthStackFive" TabDescription="Night of Majesty" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="sixthFive" Tapped="sixthFive_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    
+
                     <myLocal:MyStackLayout x:Name="sixthStackSix" TabDescription="Last 10 Days" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="sixthSix" Tapped="sixthSix_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
-                    <!--#endregion -->
-                    
-                </StackLayout>
-                
+                    <!--#endregion -->                          
+
             </StackLayout>
 
-        </ScrollView>               
+        </ScrollView>
 
-        <!--
-        <myLocal:BackgroundImage />
-        -->        
 
     </RelativeLayout>
 

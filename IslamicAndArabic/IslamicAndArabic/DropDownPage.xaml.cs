@@ -190,17 +190,17 @@ namespace IslamicAndArabic
 
         async private void firstOne_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushModalAsync(new Page());
         }
 
         async private void firstTwo_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushModalAsync(new Page());
         }
 
         async private void firstThree_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushModalAsync(new Page());
         }
 
         async private void secondOne_Tapped(object sender, EventArgs e)
