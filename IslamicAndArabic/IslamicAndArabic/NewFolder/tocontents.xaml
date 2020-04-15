@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Table Of Content"
+             x:Class="list_of_books.tocontents"
+             xmlns:local="clr-namespace:list_of_books">
+    <ContentPage.ToolbarItems> 
+        <ToolbarItem x:Name="topcn_bar" Text="?" Clicked="topcn_bar_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout 
+             Padding="2, 15, 2, 2" Spacing="1">
+        
+        <!--<Label Text="Type and search" 
+                VerticalOptions="Start" FontSize="Title" Padding="20, 0, 0, 20" FontAttributes="Bold"
+                HorizontalOptions="Start" />-->
+        <!--<SearchBar Placeholder="    Search it... Get it" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0.3, 0.2, 70, 40"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   IsVisible="True" SearchButtonPressed="SearchBar_SearchButtonPressed"/>-->
+        <!--================================================================================================================================
+        ================================================================================================================================-->
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Button x:Name="introbut" CornerRadius="20" Text="INTRODUCTION" TextColor="Wheat" BackgroundColor="#5D4037" Clicked="introbut_Clicked"/>
+                </StackLayout>
+                <local:stclayout_oop x:Name="intro_dst_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="intro_esc_bt" Text="Escape from a lot of things" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="intro_bksp_bt" Text="Backspace" Clicked="kw_dst_bt_Clicked"/>
+
+                <!--=========================================Key words=======================================================================================
+                ================================================================================================================================-->
+                <StackLayout>
+                    <Button x:Name="kw_but" CornerRadius="20" Text="KEY WORDS" TextColor="Wheat" BackgroundColor="#5D4037" Clicked="kw_but_Clicked"/>
+                </StackLayout>
+                <local:stclayout_oop x:Name="kw_dst_bt"  Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="kw_mth_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="kw_obj_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <!--=========================================Flow Contrl=======================================================================================
+                ================================================================================================================================-->
+                <StackLayout>
+                    <Button x:Name="fc_but" CornerRadius="20" Text="FLOW CONTROL" TextColor="Wheat" BackgroundColor="#5D4037" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+                <local:stclayout_oop x:Name="fc_dst_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="fc_mth_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="fc_obj_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <!--================================================================================================================================
+                ================================================================================================================================-->
+                <StackLayout>
+                    <Button x:Name="cls_but" CornerRadius="20" Text="CLASS" TextColor="Wheat" BackgroundColor="#5D4037" Clicked="cls_but_Clicked"/>
+                </StackLayout>
+                <local:stclayout_oop x:Name="cls_dst_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="cls_mth_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="cls_obj_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <!--================================================================================================================================
+                ================================================================================================================================-->
+                <StackLayout>
+                    <Button x:Name="gc_but" CornerRadius="20" Text="GRAPH AND CHART" TextColor="Wheat"
+                            BackgroundColor="#795548" Clicked="gc_but_Clicked"/>
+                </StackLayout>
+                <local:stclayout_oop x:Name="gc_dst_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="gc_mth_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <local:stclayout_oop x:Name="gc_obj_bt" Text="Binding" Clicked="kw_dst_bt_Clicked"/>
+                <!--================================================================================================================================
+                ================================================================================================================================-->
+                
+            </StackLayout>
+        </ScrollView>
+        
+    </StackLayout>
+</ContentPage>
