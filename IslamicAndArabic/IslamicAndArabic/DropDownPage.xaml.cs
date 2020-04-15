@@ -1,5 +1,7 @@
 ﻿using IslamicAndArabic.MarkupExtensions;
+using NodaTime;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +15,34 @@ namespace IslamicAndArabic
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DropDownPage : ContentPage
     {
+        public string islamicMonth(int x)
+        {
+            string[] months = new string[] { null,
+                "Muharram", "Safar", "Rabi' al-awwal", "Rabi' al-thani",
+                "Jumada' al-awwal", "Jumada' al-thani", "Rajab", "Sha'ban",
+                "Ramadan", "Shawwal", "Dhul al-Qi'dah", "Dhul al-Hijjah"
+            };
+            return months[x];            
+        }
+
+
         public DropDownPage()
         {
             InitializeComponent();
+
+            /*
+             * Time Display
+            Device.StartTimer(TimeSpan.FromSeconds(1), () => {
+
+                Device.BeginInvokeOnMainThread(() => myDate.Text = DateTime.Now.ToString());
+                return true;
+            });
+            */
+
+            HijriCalendar islamicCalendar = new HijriCalendar();
+            myIslamicDate.Text = islamicMonth(islamicCalendar.GetMonth(DateTime.Now))
+                + " " + islamicCalendar.GetDayOfMonth(DateTime.Now).ToString()
+                + ", " + islamicCalendar.GetYear(DateTime.Now).ToString() + "AH";
         }
 
         private void firstButton_Clicked(object sender, EventArgs e)
@@ -190,17 +217,17 @@ namespace IslamicAndArabic
 
         async private void firstOne_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Page());
+            await Navigation.PushAsync(new Page());
         }
 
         async private void firstTwo_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Page());
+            await Navigation.PushAsync(new Page());
         }
 
         async private void firstThree_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Page());
+            await Navigation.PushAsync(new Page());
         }
 
         async private void secondOne_Tapped(object sender, EventArgs e)

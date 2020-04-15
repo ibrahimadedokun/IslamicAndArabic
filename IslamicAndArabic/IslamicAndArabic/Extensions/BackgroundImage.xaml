@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:IslamicAndArabic.MarkupExtensions"
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.Extensions.BackgroundImage"
-            
+          
        x:Name="bgTrans"  Aspect="AspectFit" Opacity="0.1"
             Source="{local:EmbeddedImage IslamicAndArabic.images.transparentIslamicLogo.png}"
                  RelativeLayout.YConstraint="{ConstraintExpression
