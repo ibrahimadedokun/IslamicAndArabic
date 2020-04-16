@@ -8,12 +8,13 @@
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.Extensions.MyStackLayout"
              x:Name="myStackDefault" HeightRequest="35" BackgroundColor="Wheat"
-             Orientation="Horizontal">    
+             Orientation="Horizontal">
 
     <Label Margin="10,0,0,0" TextColor="#795548" Text="{Binding TabDescription}" 
                            FontSize="Medium" FontAttributes="Bold" 
                            HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
 
-    <Image Source="{local:EmbeddedImage IslamicAndArabic.images.right_arrow.png}"/> 
+    <Image Source="{local:EmbeddedImage IslamicAndArabic.images.right_arrow.png}"/>
+
 
 </StackLayout>

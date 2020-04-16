@@ -21,6 +21,8 @@ namespace IslamicAndArabic.Extensions
             get { return (string)GetValue(TabDescriptionProperty); }
             set { SetValue(TabDescriptionProperty, value); }
         }
+
+        
         public MyStackLayout()
         {
             InitializeComponent();

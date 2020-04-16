@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:myLocal="clr-namespace:IslamicAndArabic.Extensions"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.QuestionsPage"
+             Padding="10,20,10,10">    
+
+    <myLocal:StoryContents
+        ProgressBarValue="0"
+        Heading="MERLIN"
+        StoryTitle="The Story of a Great Kingdom"
+        ContentStory="In the land of myth and a time of magic, the destiny of a great kingdom rests on the shoulders of a young boy. His Name, Merlin!">        
+    </myLocal:StoryContents>
+
+    <myLocal:StoryContents
+        ProgressBarValue="0.2"
+        Heading="MERLIN"
+        StoryTitle="Friends/Foes of the Prince"
+        ContentStory="The Humble Slave - Gwenevere, Lady Morgana and Sir Lancelot.">
+    </myLocal:StoryContents>
+
+    <myLocal:StoryContents
+        ProgressBarValue="0.4"
+        Heading="MERLIN"
+        StoryTitle="The Beginning of the End"
+        ContentStory="Do you know the story of the Excalibur? That's the prestigious sword of Prince Arthur">
+    </myLocal:StoryContents>
+
+    <ContentPage x:Name="Question1">
+
+        <RelativeLayout>
+            
+            <myLocal:BackgroundImage/>
+            
+            <ProgressBar IsVisible="True" Progress="0.6" 
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+            
+            <ScrollView
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.03}">
+
+                <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Label x:Name="que1"
+                        Text="What is the young boy's name?" />
+
+                    <StackLayout x:Name="answerOptionsQ1"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=que1, Property=Height, Factor=1,Constant=100}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionA1">
+                            <CheckBox x:Name="checkA1" CheckedChanged="checkA1_CheckedChanged"/>
+                            <Label x:Name="ansA1" Text="Marcus" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionB1">
+                            <CheckBox x:Name="checkB1" CheckedChanged="checkB1_CheckedChanged"/>
+                            <Label x:Name="ansB1" Text="Merlin" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionC1">
+                            <CheckBox x:Name="checkC1" CheckedChanged="checkC1_CheckedChanged"/>
+                            <Label x:Name="ansC1" Text="Malcolm" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <Button Text="SUBMIT" x:Name="nextQ2" Clicked="nextQ2_Clicked"/>
+
+                    </StackLayout>
+
+                </RelativeLayout>                
+
+            </ScrollView>
+            
+        </RelativeLayout>  
+        
+    </ContentPage>
+
+    <!--Edit Page Name-->
+    <ContentPage x:Name="Question2">
+
+        <RelativeLayout>
+
+            <myLocal:BackgroundImage/>
+            <!--Edit Progress Bar-->
+            <ProgressBar IsVisible="True" Progress="0.8"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+
+            <ScrollView
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.03}">
+
+                <!--Edit Question and Label Name-->
+                <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Label x:Name="que2"
+                        Text="Which of these is listed among the Prince's friends?" />
+                    
+                    <!--Edit Stack Name and ElementName-->
+                    <StackLayout x:Name="answerOptionsQ2"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=que2, Property=Height, Factor=1,Constant=100}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                        
+                        <!--Edit stack of options-->
+                        <StackLayout Orientation="Horizontal" x:Name="optionA2">
+                            <CheckBox x:Name="checkA2" CheckedChanged="checkA2_CheckedChanged"/>
+                            <Label x:Name="ansA2" Text="Sir Lancelittle" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionB2">
+                            <CheckBox x:Name="checkB2" CheckedChanged="checkB2_CheckedChanged"/>
+                            <Label x:Name="ansB2" Text="Lady Iguana" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionC2">
+                            <CheckBox x:Name="checkC2" CheckedChanged="checkC2_CheckedChanged"/>
+                            <Label x:Name="ansC2" Text="Lady Morgana" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <Button Text="SUBMIT" x:Name="nextQ3" Clicked="nextQ3_Clicked"/>
+
+                    </StackLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </ContentPage>
+
+    <!--Edit Page Name-->
+    <ContentPage x:Name="Question3">
+
+        <RelativeLayout>
+
+            <myLocal:BackgroundImage/>
+            <!--Edit Progress Bar-->
+            <ProgressBar IsVisible="True" Progress="1"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+
+            <ScrollView
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.03}">
+
+                <!--Edit Question and Label Name-->
+                <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                    <Label x:Name="que3"
+                        Text="What is the name of the Prince's sword?" />
+
+                    <!--Edit Stack Name and ElementName-->
+                    <StackLayout x:Name="answerOptionsQ3"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=que3, Property=Height, Factor=1,Constant=100}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <!--Edit stack of options-->
+                        <StackLayout Orientation="Horizontal" x:Name="optionA3">
+                            <CheckBox x:Name="checkA3" CheckedChanged="checkA3_CheckedChanged"/>
+                            <Label x:Name="ansA3" Text="Excalibur" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionB3">
+                            <CheckBox x:Name="checkB3" CheckedChanged="checkB3_CheckedChanged"/>
+                            <Label x:Name="ansB3" Text="Excavateur" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" x:Name="optionC3">
+                            <CheckBox x:Name="checkC3" CheckedChanged="checkC3_CheckedChanged"/>
+                            <Label x:Name="ansC3" Text="Executer" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <Button Text="FINISH" x:Name="finished" Clicked="finished_Clicked"/>
+
+                    </StackLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </ContentPage>
+
+
+
+</CarouselPage>

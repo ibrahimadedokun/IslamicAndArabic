@@ -25,5 +25,6 @@ namespace IslamicAndArabic
         protected override void OnResume()
         {
         }
+
     }
 }

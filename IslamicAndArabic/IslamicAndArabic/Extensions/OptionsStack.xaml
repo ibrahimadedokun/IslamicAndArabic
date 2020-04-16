@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.Extensions.OptionsStack"
+             Orientation="Horizontal"
+             x:Name="optionStakkk"
+             VerticalOptions="Center"
+             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+    
+    <StackLayout.GestureRecognizers>
+        <TapGestureRecognizer x:Name="tapFxn" />
+    </StackLayout.GestureRecognizers>
+
+    <CheckBox  x:Name="checkBox"/>
+
+    <Label  Text="{Binding Option}" VerticalTextAlignment="Center">
+        <Label.Triggers>
+            <DataTrigger TargetType="Label"
+                         Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                         Value="true">
+                <Setter Property="TextColor" Value="Wheat"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </DataTrigger>
+        </Label.Triggers>
+
+    </Label>
+
+    <StackLayout.Triggers>
+        <DataTrigger TargetType="StackLayout"
+                     Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                     Value="true">
+            <Setter Property="BackgroundColor" Value="#795548"/>
+        </DataTrigger>        
+    </StackLayout.Triggers>
+    
+
+
+</StackLayout>

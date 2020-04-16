@@ -8,10 +8,20 @@
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.DropDownPage"
              Title="Table of Contents"
-             Padding="0,20,0,0">
+             Padding="0,20,0,10">
+    
+    <!--Initial declarations-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Int32 x:Key="cornerRadius">20</x:Int32>
+            <x:String x:Key="textCol">Wheat</x:String>
+            <x:String x:Key="bgCol">#795548</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <RelativeLayout >
-        <StackLayout Padding="20,0,20,20">
+        
+        <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}">
             <Label x:Name="myIslamicDate" FontSize="Body" FontAttributes="Bold" TextColor="Black"/>            
         </StackLayout>
 
@@ -19,31 +29,27 @@
         
         <ScrollView 
             Padding="20,0,20,20"
-            RelativeLayout.YConstraint="{ConstraintExpression
-            Type=RelativeToParent,
-            Property=Height,
-            Factor=0.05}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression
-            Type=RelativeToParent,
-            Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression
-            Type=RelativeToParent,
-            Property=Width}">
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.04}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
             
             <StackLayout>
                 
                     <!--#region First Division-->
                     <StackLayout>
-                        <Button x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" TextColor="Wheat"
+                        <Button x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" 
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
-                    
-                </StackLayout>
+                            FontAttributes="Bold" FontSize="Large"
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/> 
+                        
+                    </StackLayout>
                     <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Definition" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="firstOne" Tapped="firstOne_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
+                
                     <myLocal:MyStackLayout x:Name="firstStackTwo" TabDescription="Start Time and End" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="firstTwo" Tapped="firstTwo_Tapped"/>
@@ -63,15 +69,18 @@
 
                     <!--#region Second Division-->
                     <StackLayout>
-                        <Button x:Name="secondButton" Text="Types of Sawm" TextColor="Wheat" Clicked="secondButton_Clicked"
+                        <Button x:Name="secondButton" Text="Types of Sawm" Clicked="secondButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            FontAttributes="Bold" FontSize="Large" 
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="secondStackOne" TabDescription="Classification" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="secondOne" Tapped="secondOne_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
+                
                     <myLocal:MyStackLayout x:Name="secondStackTwo" TabDescription="Example of Voluntary" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="secondTwo" Tapped="secondTwo_Tapped"/>
@@ -91,15 +100,18 @@
 
                     <!--#region Third Division-->
                     <StackLayout>
-                        <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" TextColor="Wheat" Clicked="thirdButton_Clicked"
+                        <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" Clicked="thirdButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            FontAttributes="Bold" FontSize="Large" 
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="thirdStackOne" TabDescription="Repay" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="thirdOne" Tapped="thirdOne_Tapped"/>
                         </myLocal:MyStackLayout.GestureRecognizers>
                     </myLocal:MyStackLayout>
+                
                     <myLocal:MyStackLayout x:Name="thirdStackTwo" TabDescription="Pay by other Means" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
                             <TapGestureRecognizer x:Name="thirdTwo" Tapped="thirdTwo_Tapped"/>
@@ -114,9 +126,11 @@
 
                     <!--#region Fourth Division-->
                     <StackLayout>
-                        <Button x:Name="fourthButton" Text="Days Not to Fast Voluntarily" TextColor="Wheat" Clicked="fourthButton_Clicked"
+                        <Button x:Name="fourthButton" Text="Days Not to Fast Voluntarily" Clicked="fourthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            FontAttributes="Bold" FontSize="Large" 
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="fourthStackOne" TabDescription="Days Not to Fast Voluntarily" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -127,9 +141,11 @@
 
                     <!--#region Fifth Division-->
                     <StackLayout>
-                        <Button x:Name="fifthButton" Text="Invalidation of Sawm" TextColor="Wheat" Clicked="fifthButton_Clicked"
+                        <Button x:Name="fifthButton" Text="Invalidation of Sawm" Clicked="fifthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            FontAttributes="Bold" FontSize="Large"
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="fifthStackOne" TabDescription="Things that Invalidate Sawm" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -145,9 +161,11 @@
 
                     <!--#region Sixth Division-->
                     <StackLayout>
-                        <Button x:Name="sixthButton" Text="Good deeds in Ramadan" TextColor="Wheat" Clicked="sixthButton_Clicked"
+                        <Button x:Name="sixthButton" Text="Good deeds in Ramadan" Clicked="sixthButton_Clicked"
                             ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            CornerRadius="20" FontAttributes="Bold" FontSize="Large"  BackgroundColor="#795548"/>
+                            FontAttributes="Bold" FontSize="Large" 
+                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
+                            TextColor="{DynamicResource textCol}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="sixthStackOne" TabDescription="Qur'an" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>

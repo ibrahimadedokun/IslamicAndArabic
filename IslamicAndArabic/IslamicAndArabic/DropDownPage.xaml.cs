@@ -25,6 +25,15 @@ namespace IslamicAndArabic
             return months[x];            
         }
 
+        public void marquee(Label l)
+        {
+            //l.HorizontalOptions = LayoutOptions.Start;
+            //l.VerticalTextAlignment = TextAlignment.Center;
+            l.LineBreakMode = LineBreakMode.NoWrap;
+            l.TranslateTo(-200, 0, 4000, Easing.Linear);
+            l.TranslateTo(0, 0, 4000, Easing.Linear);
+            l.TranslateTo(400, 0, 4000, Easing.Linear);
+        }
 
         public DropDownPage()
         {
@@ -217,7 +226,7 @@ namespace IslamicAndArabic
 
         async private void firstOne_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushAsync(new QuestionsPage());
         }
 
         async private void firstTwo_Tapped(object sender, EventArgs e)
