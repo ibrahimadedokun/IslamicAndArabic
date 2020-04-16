@@ -6,25 +6,23 @@
              xmlns:myLocal="clr-namespace:IslamicAndArabic.Extensions"
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.QuestionsPage"
+              Title="Definition"
              Padding="10,20,10,10">    
 
     <myLocal:StoryContents
         ProgressBarValue="0"
-        Heading="MERLIN"
         StoryTitle="The Story of a Great Kingdom"
         ContentStory="In the land of myth and a time of magic, the destiny of a great kingdom rests on the shoulders of a young boy. His Name, Merlin!">        
     </myLocal:StoryContents>
 
     <myLocal:StoryContents
         ProgressBarValue="0.2"
-        Heading="MERLIN"
         StoryTitle="Friends/Foes of the Prince"
         ContentStory="The Humble Slave - Gwenevere, Lady Morgana and Sir Lancelot.">
     </myLocal:StoryContents>
 
     <myLocal:StoryContents
         ProgressBarValue="0.4"
-        Heading="MERLIN"
         StoryTitle="The Beginning of the End"
         ContentStory="Do you know the story of the Excalibur? That's the prestigious sword of Prince Arthur">
     </myLocal:StoryContents>

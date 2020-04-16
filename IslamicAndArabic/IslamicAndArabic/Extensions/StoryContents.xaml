@@ -29,8 +29,6 @@
                 <StackLayout Orientation="Vertical"
                              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}"
                              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-                    
-                    <Label Text="{Binding Heading}" FontSize="Large" FontAttributes="Bold"/>
 
                     <Label Text="{Binding StoryTitle}" FontSize="Medium" FontAttributes="Bold"/>
 
