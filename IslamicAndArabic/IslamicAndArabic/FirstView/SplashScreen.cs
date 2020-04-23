@@ -27,11 +27,11 @@ namespace IslamicAndArabic.FirstView
         {
             base.OnAppearing();
 
-            await SplashImage.ScaleTo(0.5, 1500);
-            await SplashImage.ScaleTo(1, 1500, Easing.Linear);
-            await SplashImage.ScaleTo(0.5, 1000, Easing.Linear);
+            await SplashImage.ScaleTo(0.5, 1000);
+            await SplashImage.ScaleTo(1, 1000, Easing.Linear);
+            await SplashImage.ScaleTo(0.5, 800, Easing.Linear);
 
-            Application.Current.MainPage = new NavigationPage(new QuestionsPage());
+            Application.Current.MainPage = new NavigationPage(new DropDownPage());
         }
     }
 }

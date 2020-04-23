@@ -25,16 +25,7 @@ namespace IslamicAndArabic
             return months[x];            
         }
 
-        public void marquee(Label l)
-        {
-            //l.HorizontalOptions = LayoutOptions.Start;
-            //l.VerticalTextAlignment = TextAlignment.Center;
-            l.LineBreakMode = LineBreakMode.NoWrap;
-            l.TranslateTo(-200, 0, 4000, Easing.Linear);
-            l.TranslateTo(0, 0, 4000, Easing.Linear);
-            l.TranslateTo(400, 0, 4000, Easing.Linear);
-        }
-
+        
         public DropDownPage()
         {
             InitializeComponent();

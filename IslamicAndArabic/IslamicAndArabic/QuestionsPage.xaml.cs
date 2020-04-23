@@ -11,14 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace IslamicAndArabic
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [Preserve(AllMembers = true)]
     public partial class QuestionsPage : CarouselPage
     {
-        string[] MyQuestionsArray = new string[]
+        IDictionary<string, string> MyQuestionsDico = new Dictionary<string, string>()
         {
-            null,
-            "What is the young boy's name?",
-            "Which of these is listed among the Prince's friends?",
-            "What is the name of the Prince's sword?"
+            {"Question_1", "What is the young boy's name?" },
+            {"Question_2", "Which of these is listed among the Prince's friends?" },
+            {"Question_3", "What is the name of the Prince's sword?" }
         };
 
         string[,] MyOptionsArray = new string[,]
@@ -58,10 +58,10 @@ namespace IslamicAndArabic
             b3.Option = MyOptionsArray[3, 2];
             c3.Option = MyOptionsArray[3, 3];
 
-            Q1.PageQuestion = MyQuestionsArray[1];
-            Q2.PageQuestion = MyQuestionsArray[2];
-            Q3.PageQuestion = MyQuestionsArray[3];
-
+            Q1.PageQuestion = MyQuestionsDico["Question_1"];
+            Q2.PageQuestion = MyQuestionsDico["Question_2"];
+            Q3.PageQuestion = MyQuestionsDico["Question_3"];
+            
             P1.ProgressBarValue = 0.167;
             P2.ProgressBarValue = 0.33;
             P3.ProgressBarValue = 0.5;
@@ -73,131 +73,66 @@ namespace IslamicAndArabic
             P2.StoryTitle = MyStoryTitleArray[2];
             P3.StoryTitle = MyStoryTitleArray[3];
         }
-
-
-        #region Next Chapter button
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_c1">This is the checkbox of the correct answer</param>
-        public void completeSection(CheckBox _c1)
-        {
-            if(_c1.IsChecked == true)
-            {
-                DisplayAlert("Success", "You Passed this Chapter", "Proceed to Next Chapter");
-                return;
-            }
-            else
-                DisplayAlert(null, "Wrong", "Try Again");
-        }
-        #endregion
-
         
-        /// <summary>
-        /// Persist an option selection and prevent multiple
-        /// </summary>
-        /// <param name="s1">This is the option chosen and should be passed first</param>
-        /// <param name="s2">Option not chosen</param>
-        /// <param name="s3">Option not chosen</param>
-        private void OptionSelected(OptionsStack s1, OptionsStack s2, OptionsStack s3)
-        {
-            s1.PersonalIsChecked = true;
-            s2.PersonalIsChecked = false;
-            s3.PersonalIsChecked = false;
-        }
-
-        /// <summary>
-        /// Navigating to the next question
-        /// </summary>
-        /// <param name="ax">Correct Option's Stack (this must come first)</param>
-        /// <param name="bx">Other Option</param>
-        /// <param name="cx">Other Option</param>
-        /// <param name="s">(Optional) It's the next question's options stack that should be activated</param>
-        /// <param name="isComplete">(Optional) Set to true if this question is the last</param>
-        private void nextQuestion(OptionsStack ax, OptionsStack bx, OptionsStack cx, StackLayout s = null, bool isComplete = false)
-        {
-            if (ax.PersonalIsChecked)
-            {
-                if (isComplete)
-                {
-                    DisplayAlert("Success", "You Passed this Chapter", "Proceed to Next Chapter");
-                    return;
-                }
-                else
-                {
-                    DisplayAlert("Mumtaaz", "You got it right", "Swipe to the next question");
-                    s.IsEnabled = true;
-                    return;
-                }                
-            }
-            else if (!ax.PersonalIsChecked && !bx.PersonalIsChecked && !cx.PersonalIsChecked)
-            {
-                DisplayAlert("Alert", "Choose an Option", "OK");
-            }
-            else
-            {
-                DisplayAlert(null, "Wrong", "Try Again");
-            }
-        }
 
         private void _a1_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(a1, b1, c1);
+            App.Current.OptionSelected(a1, b1, c1);
         }
 
         private void _b1_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(b1, a1, c1);
+            App.Current.OptionSelected(b1, a1, c1);
         }
 
         private void _c1_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(c1, a1, b1);
+            App.Current.OptionSelected(c1, a1, b1);
         }
 
         private void _a2_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(a2, b2, c2);
+            App.Current.OptionSelected(a2, b2, c2);
         }
 
         private void _b2_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(b2, a2, c2);
+            App.Current.OptionSelected(b2, a2, c2);
         }
 
         private void _c2_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(c2, a2, b2);
+            App.Current.OptionSelected(c2, a2, b2);
         }
 
         private void _a3_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(a3, b3, c3);
+            App.Current.OptionSelected(a3, b3, c3);
         }
 
         private void _b3_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(b3, a3, c3);
+            App.Current.OptionSelected(b3, a3, c3);
         }
 
         private void _c3_Tapped(object sender, EventArgs e)
         {
-            OptionSelected(c3, a3, b3);
+            App.Current.OptionSelected(c3, a3, b3);
         }
 
         private void q1Button_Clicked(object sender, EventArgs e)
         {
-            nextQuestion(b1, a1, c1, opSTACK2);              
+            App.Current.nextQuestion(b1, a1, c1, opSTACK2);              
         }
 
         private void q2Button_Clicked(object sender, EventArgs e)
         {
-            nextQuestion(c2, a2, b2, opSTACK3);
+            App.Current.nextQuestion(c2, a2, b2, opSTACK3);
         }
 
         private void q3Button_Clicked(object sender, EventArgs e)
         {
-            nextQuestion(a3, b3, c3, null, true);
+            App.Current.nextQuestion(a3, b3, c3, null, true);
         }
     }
 }

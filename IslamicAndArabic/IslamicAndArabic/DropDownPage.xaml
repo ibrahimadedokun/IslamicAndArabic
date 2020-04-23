@@ -13,9 +13,13 @@
     <!--Initial declarations-->
     <ContentPage.Resources>
         <ResourceDictionary>
-            <x:Int32 x:Key="cornerRadius">20</x:Int32>
-            <x:String x:Key="textCol">Wheat</x:String>
-            <x:String x:Key="bgCol">#795548</x:String>
+            <Style x:Key="dropDownButtonStyle" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="BackgroundColor" Value="#795548"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="TextColor" Value="Wheat"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -37,11 +41,8 @@
                 
                     <!--#region First Division-->
                     <StackLayout>
-                        <Button x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" 
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large"
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/> 
+                    <Button ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
+                        Style="{StaticResource dropDownButtonStyle}" x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" /> 
                         
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Definition" IsVisible="False" >
@@ -70,10 +71,7 @@
                     <!--#region Second Division-->
                     <StackLayout>
                         <Button x:Name="secondButton" Text="Types of Sawm" Clicked="secondButton_Clicked"
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large" 
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/>
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}" Style="{StaticResource dropDownButtonStyle}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="secondStackOne" TabDescription="Classification" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -101,10 +99,7 @@
                     <!--#region Third Division-->
                     <StackLayout>
                         <Button x:Name="thirdButton" Text="Exemptions from Compulsory Fasting" Clicked="thirdButton_Clicked"
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large" 
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/>
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}" Style="{StaticResource dropDownButtonStyle}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="thirdStackOne" TabDescription="Repay" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -127,10 +122,7 @@
                     <!--#region Fourth Division-->
                     <StackLayout>
                         <Button x:Name="fourthButton" Text="Days Not to Fast Voluntarily" Clicked="fourthButton_Clicked"
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large" 
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/>
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}" Style="{StaticResource dropDownButtonStyle}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="fourthStackOne" TabDescription="Days Not to Fast Voluntarily" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -142,10 +134,7 @@
                     <!--#region Fifth Division-->
                     <StackLayout>
                         <Button x:Name="fifthButton" Text="Invalidation of Sawm" Clicked="fifthButton_Clicked"
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large"
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/>
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}" Style="{StaticResource dropDownButtonStyle}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="fifthStackOne" TabDescription="Things that Invalidate Sawm" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>
@@ -162,10 +151,7 @@
                     <!--#region Sixth Division-->
                     <StackLayout>
                         <Button x:Name="sixthButton" Text="Good deeds in Ramadan" Clicked="sixthButton_Clicked"
-                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                            FontAttributes="Bold" FontSize="Large" 
-                            BackgroundColor="{DynamicResource bgCol}" CornerRadius="{DynamicResource cornerRadius}"
-                            TextColor="{DynamicResource textCol}"/>
+                            ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}" Style="{StaticResource dropDownButtonStyle}"/>
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="sixthStackOne" TabDescription="Qur'an" IsVisible="False">
                         <myLocal:MyStackLayout.GestureRecognizers>

@@ -49,7 +49,7 @@
             
             <Extensions:QuestionsPageTemplate.Button>
                 <StackLayout>
-                    <Button x:Name="q1Button" Text="Submit" Clicked="q1Button_Clicked"/>
+                    <Button Style="{StaticResource buttonStyle}" x:Name="q1Button" Text="Submit" Clicked="q1Button_Clicked"/>
                 </StackLayout>
             </Extensions:QuestionsPageTemplate.Button>
             
@@ -86,7 +86,7 @@
 
             <Extensions:QuestionsPageTemplate.Button>
                 <StackLayout>
-                    <Button x:Name="q2Button" Text="Submit" Clicked="q2Button_Clicked"/>
+                    <Button Style="{StaticResource buttonStyle}" x:Name="q2Button" Text="Submit" Clicked="q2Button_Clicked"/>
                 </StackLayout>
             </Extensions:QuestionsPageTemplate.Button>
 
@@ -122,7 +122,7 @@
 
             <Extensions:QuestionsPageTemplate.Button>
                 <StackLayout>
-                    <Button x:Name="q3Button" Text="Complete" Clicked="q3Button_Clicked"/>
+                    <Button Style="{StaticResource buttonStyle}"  x:Name="q3Button" Text="Complete" Clicked="q3Button_Clicked"/>
                 </StackLayout>
             </Extensions:QuestionsPageTemplate.Button>
 

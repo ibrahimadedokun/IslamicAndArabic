@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:IslamicAndArabic.MarkupExtensions"
-             xmlns:myLocal="clr-namespace:IslamicAndArabic.Extensions"
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.Extensions.MyStackLayout"
              x:Name="myStackDefault" HeightRequest="35" BackgroundColor="Wheat"
