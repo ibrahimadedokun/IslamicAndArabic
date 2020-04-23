@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Extensions="clr-namespace:IslamicAndArabic.Extensions"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.Extensions.QuestionsPageTemplate">
+
+    <!--medium.com/@HoussemDellai/creating-page-templates-for-xamarin-forms-ec8cbc336d25-->
+
+    <ContentView.Content>
+        <RelativeLayout>
+
+            <Extensions:BackgroundImage/>
+
+            <ProgressBar x:Name="ProgressBarValue" IsVisible="True" 
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+           
+            <ScrollView
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}">
+
+                <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+                    <Label x:Name="Question"/>
+
+                    <!--This content view should have a stack layout of options stack-->
+                    <ContentView x:Name="OptionsBodyContent"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Question, Property=Height, Factor=1,Constant=100}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                        
+                    </ContentView>
+
+                    <!--This content view should have a stacklayout of the button at the bottom of the page-->
+                    <ContentView x:Name="PageButtonSection"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                    </ContentView>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+    </ContentView.Content>
+</ContentView>

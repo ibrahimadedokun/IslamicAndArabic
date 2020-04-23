@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace IslamicAndArabic.View
+namespace IslamicAndArabic.FirstView
 {
     class SplashScreen : ContentPage
     {
@@ -31,7 +31,7 @@ namespace IslamicAndArabic.View
             await SplashImage.ScaleTo(1, 1500, Easing.Linear);
             await SplashImage.ScaleTo(0.5, 1000, Easing.Linear);
 
-            Application.Current.MainPage = new NavigationPage(new DropDownPage());
+            Application.Current.MainPage = new NavigationPage(new QuestionsPage());
         }
     }
 }

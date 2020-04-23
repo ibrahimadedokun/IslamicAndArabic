@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IslamicAndArabic.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,82 +13,69 @@ namespace IslamicAndArabic
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuestionsPage : CarouselPage
     {
+        string[] MyQuestionsArray = new string[]
+        {
+            null,
+            "What is the young boy's name?",
+            "Which of these is listed among the Prince's friends?",
+            "What is the name of the Prince's sword?"
+        };
+
+        string[,] MyOptionsArray = new string[,]
+        {
+            /* Ignore the null
+             a1,b1,c1
+             a2,b2,c2
+             a3,b3,c3
+             */
+            {null, null, null, null },
+            {null, "Maurice", "Merlin", "Martin" },
+            {null, "Sir Lancelittle", "Lady Iguana", "Lady Morgana" },
+            {null, "Excalibur", "Excavateur", "Executer" }
+        };
+
+        string[] MyStoryTitleArray = new string[]
+        {
+            null,
+            "The Story of a Great Kingdom",
+            "Friends/Foes of the Prince",
+            "The Beginning of the End"
+        };
+
         public QuestionsPage()
         {
             InitializeComponent();
+
+            a1.Option = MyOptionsArray[1, 1];
+            b1.Option = MyOptionsArray[1, 2];
+            c1.Option = MyOptionsArray[1, 3];
+
+            a2.Option = MyOptionsArray[2, 1];
+            b2.Option = MyOptionsArray[2, 2];
+            c2.Option = MyOptionsArray[2, 3];
+
+            a3.Option = MyOptionsArray[3, 1];
+            b3.Option = MyOptionsArray[3, 2];
+            c3.Option = MyOptionsArray[3, 3];
+
+            Q1.PageQuestion = MyQuestionsArray[1];
+            Q2.PageQuestion = MyQuestionsArray[2];
+            Q3.PageQuestion = MyQuestionsArray[3];
+
+            P1.ProgressBarValue = 0.167;
+            P2.ProgressBarValue = 0.33;
+            P3.ProgressBarValue = 0.5;
+            Q1.ProgressBar = 0.67;
+            Q2.ProgressBar = 0.833;
+            Q3.ProgressBar = 1;
+
+            P1.StoryTitle = MyStoryTitleArray[1];
+            P2.StoryTitle = MyStoryTitleArray[2];
+            P3.StoryTitle = MyStoryTitleArray[3];
         }
 
-        #region Check box ticking and unticking
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="arg">The CheckedChangedEventArgs which is e by default from the generated method</param>
-        /// <param name="s1">This is the active stack layout for the checkbox. It should be declared first</param>
-        /// <param name="s2">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        /// <param name="s3">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        /// <param name="l1">This is the active stack layout for the checkbox. It should be declared first</param>
-        /// <param name="l2">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        /// <param name="l3">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        /// <param name="c1">This is the active stack layout for the checkbox. It should be declared first</param>
-        /// <param name="c2">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        /// <param name="c3">The other stacklayout option, order does not matter for the remaining checkboxes</param>
-        public void checkBoxBehaviour(CheckedChangedEventArgs arg, StackLayout s1, StackLayout s2, StackLayout s3, Label l1, Label l2, Label l3, CheckBox c1, CheckBox c2, CheckBox c3)
-        {
-            bool status = arg.Value;
-            if (status == true)
-            {
-                optionChecked(s1, l1, c2, c3);
-                optionUnchecked(s2, l2);
-                optionUnchecked(s3, l3);
 
-            }
-            else
-                optionUnchecked(s1, l1);
-        }
-        
-        public void optionChecked(StackLayout S, Label L, CheckBox C1, CheckBox C2)
-        {
-            S.BackgroundColor = Color.FromHex("#795548");
-            L.FontAttributes = FontAttributes.Bold;
-            L.TextColor = Color.Wheat;
-            C1.IsChecked = false;
-            C2.IsChecked = false;
-        }
-
-        public void optionUnchecked(StackLayout _S, Label _L)
-        {
-            _S.BackgroundColor = Color.Default;
-            _L.FontAttributes = FontAttributes.None;
-            _L.TextColor = Color.Black;
-        }
-
-        #endregion
-
-
-        #region Submit button for the next question
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ch1">The checkbox for the correct answer. This should be declared first</param>
-        /// <param name="ch2">Other checkboxes order does not matter</param>
-        /// <param name="ch3">Other checkboxes order does not matter</param>
-        /// <param name="st">The next page's stacklayout which should be activated if a correct option is chosen</param>
-        public void nextQue(CheckBox ch1, CheckBox ch2, CheckBox ch3, StackLayout st)
-        {
-            if (ch1.IsChecked == true)
-            {
-                DisplayAlert("Mumtaaz", "You got it right", "Swipe to the next question");
-                st.IsEnabled = true;
-                return;
-            }
-            else if (ch1.IsChecked == false && ch2.IsChecked == false && ch3.IsChecked == false)
-                DisplayAlert("Alert", "Choose an Option", "OK");
-            else
-                DisplayAlert(null, "Wrong", "Try Again");
-        }
-        #endregion
-
-        #region Next section button
+        #region Next Chapter button
         /// <summary>
         /// 
         /// </summary>
@@ -104,64 +92,112 @@ namespace IslamicAndArabic
         }
         #endregion
 
-        private void checkA1_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        
+        /// <summary>
+        /// Persist an option selection and prevent multiple
+        /// </summary>
+        /// <param name="s1">This is the option chosen and should be passed first</param>
+        /// <param name="s2">Option not chosen</param>
+        /// <param name="s3">Option not chosen</param>
+        private void OptionSelected(OptionsStack s1, OptionsStack s2, OptionsStack s3)
         {
-            checkBoxBehaviour(e, optionA1, optionB1, optionC1, ansA1, ansB1, ansC1, checkA1, checkB1, checkC1);
+            s1.PersonalIsChecked = true;
+            s2.PersonalIsChecked = false;
+            s3.PersonalIsChecked = false;
         }
 
-        private void checkC1_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        /// <summary>
+        /// Navigating to the next question
+        /// </summary>
+        /// <param name="ax">Correct Option's Stack (this must come first)</param>
+        /// <param name="bx">Other Option</param>
+        /// <param name="cx">Other Option</param>
+        /// <param name="s">(Optional) It's the next question's options stack that should be activated</param>
+        /// <param name="isComplete">(Optional) Set to true if this question is the last</param>
+        private void nextQuestion(OptionsStack ax, OptionsStack bx, OptionsStack cx, StackLayout s = null, bool isComplete = false)
         {
-            checkBoxBehaviour(e, optionC1, optionB1, optionA1, ansC1, ansB1, ansA1, checkC1, checkB1, checkA1);
-        }        
-
-        private void checkB1_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            checkBoxBehaviour(e, optionB1, optionA1, optionC1, ansB1, ansA1, ansC1, checkB1, checkA1, checkC1);
+            if (ax.PersonalIsChecked)
+            {
+                if (isComplete)
+                {
+                    DisplayAlert("Success", "You Passed this Chapter", "Proceed to Next Chapter");
+                    return;
+                }
+                else
+                {
+                    DisplayAlert("Mumtaaz", "You got it right", "Swipe to the next question");
+                    s.IsEnabled = true;
+                    return;
+                }                
+            }
+            else if (!ax.PersonalIsChecked && !bx.PersonalIsChecked && !cx.PersonalIsChecked)
+            {
+                DisplayAlert("Alert", "Choose an Option", "OK");
+            }
+            else
+            {
+                DisplayAlert(null, "Wrong", "Try Again");
+            }
         }
 
-        private void nextQ2_Clicked(object sender, EventArgs e)
+        private void _a1_Tapped(object sender, EventArgs e)
         {
-            nextQue(checkB1, checkA1, checkC1, answerOptionsQ2);
+            OptionSelected(a1, b1, c1);
         }
 
-        private void checkC2_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _b1_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionC2, optionB2, optionA2, ansC2, ansB2, ansA2, checkC2, checkB2, checkA2);
+            OptionSelected(b1, a1, c1);
         }
 
-        private void checkB2_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _c1_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionB2, optionA2, optionC2, ansB2, ansA2, ansC2, checkB2, checkA2, checkC2);
+            OptionSelected(c1, a1, b1);
         }
 
-        private void checkA2_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _a2_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionA2, optionB2, optionC2, ansA2, ansB2, ansC2, checkA2, checkB2, checkC2);
+            OptionSelected(a2, b2, c2);
         }
 
-        private void nextQ3_Clicked(object sender, EventArgs e)
+        private void _b2_Tapped(object sender, EventArgs e)
         {
-            nextQue(checkC2, checkA2, checkB2, answerOptionsQ3);
+            OptionSelected(b2, a2, c2);
         }
 
-        private void checkB3_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _c2_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionB3, optionA3, optionC3, ansB3, ansA3, ansC3, checkB3, checkA3, checkC3);
+            OptionSelected(c2, a2, b2);
         }
 
-        private void checkA3_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _a3_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionA3, optionB3, optionC3, ansA3, ansB3, ansC3, checkA3, checkB3, checkC3);
+            OptionSelected(a3, b3, c3);
         }
 
-        private void checkC3_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void _b3_Tapped(object sender, EventArgs e)
         {
-            checkBoxBehaviour(e, optionC3, optionB3, optionA3, ansC3, ansB3, ansA3, checkC3, checkB3, checkA3);
+            OptionSelected(b3, a3, c3);
         }
 
-        private void finished_Clicked(object sender, EventArgs e)
+        private void _c3_Tapped(object sender, EventArgs e)
         {
-            completeSection(checkA3);
+            OptionSelected(c3, a3, b3);
+        }
+
+        private void q1Button_Clicked(object sender, EventArgs e)
+        {
+            nextQuestion(b1, a1, c1, opSTACK2);              
+        }
+
+        private void q2Button_Clicked(object sender, EventArgs e)
+        {
+            nextQuestion(c2, a2, b2, opSTACK3);
+        }
+
+        private void q3Button_Clicked(object sender, EventArgs e)
+        {
+            nextQuestion(a3, b3, c3, null, true);
         }
     }
 }

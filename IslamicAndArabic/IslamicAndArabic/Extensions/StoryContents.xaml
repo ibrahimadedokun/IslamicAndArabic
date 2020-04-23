@@ -12,15 +12,14 @@
     StoryTitle
     ContentStory-->
     
-    <RelativeLayout Margin="10">
+    <RelativeLayout>
 
         <myLocal:BackgroundImage/>
 
-        <ProgressBar IsVisible="True" Progress="{Binding ProgressBarValue}" x:Name="progBar"
+        <ProgressBar IsVisible="True" Progress="{Binding ProgressBarValue}"
                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
 
         <ScrollView 
-            Padding="10,0,10,10"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
             
@@ -30,7 +29,7 @@
                              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}"
                              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                    <Label Text="{Binding StoryTitle}" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label Text="{Binding StoryTitle}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
                     <Label Text="{Binding ContentStory}"/>
 

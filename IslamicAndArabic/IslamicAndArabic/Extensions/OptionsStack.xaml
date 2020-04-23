@@ -9,12 +9,8 @@
              x:Name="optionStakkk"
              VerticalOptions="Center"
              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-    
-    <StackLayout.GestureRecognizers>
-        <TapGestureRecognizer x:Name="tapFxn" />
-    </StackLayout.GestureRecognizers>
-
-    <CheckBox  x:Name="checkBox"/>
+ 
+    <CheckBox  x:Name="checkBox" IsChecked="{Binding PersonalIsChecked}" IsEnabled="False"/>
 
     <Label  Text="{Binding Option}" VerticalTextAlignment="Center">
         <Label.Triggers>
@@ -25,7 +21,6 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
             </DataTrigger>
         </Label.Triggers>
-
     </Label>
 
     <StackLayout.Triggers>
@@ -35,7 +30,5 @@
             <Setter Property="BackgroundColor" Value="#795548"/>
         </DataTrigger>        
     </StackLayout.Triggers>
-    
-
 
 </StackLayout>
