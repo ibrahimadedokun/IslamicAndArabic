@@ -2,21 +2,21 @@
 using System;
 using System.Collections.Generic;
 
-
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
-namespace IslamicAndArabic
+namespace IslamicAndArabic.Types_Of_Fast
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [Preserve(AllMembers = true)]
-    public partial class QuestionsPage : CarouselPage
+    [Xamarin.Forms.Internals.Preserve(AllMembers = true)]
+    public partial class Classification : CarouselPage
     {
         IDictionary<string, string> MyQuestionsDico = new Dictionary<string, string>()
         {
-            {"Question_1", "What is the young boy's name?" },
-            {"Question_2", "Which of these is listed among the Prince's friends?" },
-            {"Question_3", "What is the name of the Prince's sword?" }
+            {"Question_1", "Types of fast can be classified into 2 categories. They are" },
+            {"Question_2", "Fard Muaiyyan is an obligatory fast observed" },
+            {"Question_3", "Which of these is the avowed fast without a particular day in mind?" }
         };
 
         string[,] MyOptionsArray = new string[,]
@@ -27,20 +27,13 @@ namespace IslamicAndArabic
              a3,b3,c3
              */
             {null, null, null, null },
-            {null, "Maurice", "Merlin", "Martin" },
-            {null, "Sir Lancelittle", "Lady Iguana", "Lady Morgana" },
-            {null, "Excalibur", "Excavateur", "Executer" }
+            {null, "Fard and Wajib", "Voluntary and Involuntary", "Sunnah and Nafl" },
+            {null, "to make up for fast intentionally missed during Ramadan", "to make up for fast accidentally missed during Ramadan", "at a specific time such as the month of Ramadan" },
+            {null, "Wajib Ghair Muaiyyan", "Wajib Muaiyyan", "Sunnah Muakkadah" }
         };
 
-        string[] MyStoryTitleArray = new string[]
-        {
-            null,
-            "The Story of a Great Kingdom",
-            "Friends/Foes of the Prince",
-            "The Beginning of the End"
-        };
 
-        public QuestionsPage()
+        public Classification()
         {
             InitializeComponent();
 
@@ -59,19 +52,11 @@ namespace IslamicAndArabic
             Q1.PageQuestion = MyQuestionsDico["Question_1"];
             Q2.PageQuestion = MyQuestionsDico["Question_2"];
             Q3.PageQuestion = MyQuestionsDico["Question_3"];
-            
-            P1.ProgressBarValue = 0.166;
-            P2.ProgressBarValue = 0.33;
-            P3.ProgressBarValue = 0.5;
-            Q1.ProgressBar = 0.66;
+
+            Q1.ProgressBar = 0.67;
             Q2.ProgressBar = 0.83;
             Q3.ProgressBar = 1;
-
-            P1.StoryTitle = MyStoryTitleArray[1];
-            P2.StoryTitle = MyStoryTitleArray[2];
-            P3.StoryTitle = MyStoryTitleArray[3];
         }
-        
 
         private void _a1_Tapped(object sender, EventArgs e)
         {
@@ -120,7 +105,7 @@ namespace IslamicAndArabic
 
         private void q1Button_Clicked(object sender, EventArgs e)
         {
-            App.Current.nextQuestion(b1, a1, c1, opSTACK2);              
+            App.Current.nextQuestion(b1, a1, c1, opSTACK2);
         }
 
         private void q2Button_Clicked(object sender, EventArgs e)
@@ -130,7 +115,29 @@ namespace IslamicAndArabic
 
         private void q3Button_Clicked(object sender, EventArgs e)
         {
-            App.Current.nextQuestion(a3, b3, c3, null, true);
+            //App.Current.nextQuestion(a3, b3, c3, null, true);
+            nextPage(a3,b3,c3);
+
+        }
+
+        public async void nextPage(OptionsStack ax, OptionsStack bx, OptionsStack cx)
+        {
+            if (ax.PersonalIsChecked)
+            {
+                var response = await DisplayAlert("Success", "You Passed this Chapter", "Proceed", "No, Thanks");
+                if(response == true)
+                {
+                    await Navigation.PushAsync(new Voluntary());
+                }
+            }
+            else if (!ax.PersonalIsChecked && !bx.PersonalIsChecked && !cx.PersonalIsChecked)
+            {
+                 await DisplayAlert("Alert", "Choose an Option", "OK");
+            }
+            else
+            {
+                await DisplayAlert(null, "Wrong", "Try Again");
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
  
     <CheckBox  x:Name="checkBox" IsChecked="{Binding PersonalIsChecked}" IsEnabled="False"/>
 
-    <Label  Text="{Binding Option}" VerticalTextAlignment="Center">
+    <Label  Text="{Binding Option}" VerticalTextAlignment="Center" FontSize="Large">
         <Label.Triggers>
             <DataTrigger TargetType="Label"
                          Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}" Value="true">

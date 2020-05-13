@@ -5,33 +5,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:Extensions="clr-namespace:IslamicAndArabic.Extensions"
              mc:Ignorable="d"
-             x:Class="IslamicAndArabic.QuestionsPage"
-             Title="Definition"
-             Padding="10,20,10,10">    
+             x:Class="IslamicAndArabic.Types_Of_Fast.Voluntary"
+             Title="Voluntary Fasts"
+             Padding="10,20,10,10">
 
-    <Extensions:StoryContents x:Name="P1"
-        ContentStory="In the land of myth and a time of magic, the destiny of a great kingdom rests on the shoulders of a young boy. His Name, Merlin!">        
+    <Extensions:StoryContents
+        x:Name="P1"
+        ContentStory="Voluntary fasts are Sunnah and Nafl. They can also be classified based on emphasis laid on them. &#10;Sunnah Muakkadah (Emphasized) fasts are those such that not observing them are considered blameworthy but not sinful until it becomes a habit to not observe them. &#10;These include 9th of Dhul-Hijjah (i.e. Day of 'Arafah), 10th of Muharram (day of 'Aashura) along with EITHER 9th or 11th of Muharram. &#10;Sunnah Ghair Muakkadah (Non-emphasized) fasts include fasting for 3 days every month (preferrably 13th, 14th and 15th), Mondays and Thursdays (Mustahab), 6 days of Shawwal and in the month of Muharram. &#10;Nafl fasts include fasting on the 15th of Sha'aban and 8 days of fasting during the first 10 days of Dhul-Hijjah.&#10;">        
     </Extensions:StoryContents>
 
-    <Extensions:StoryContents x:Name="P2"
-        ContentStory="The Humble Slave - Gwenevere, Lady Morgana and Sir Lancelot.">
-    </Extensions:StoryContents>
-
-    <Extensions:StoryContents x:Name="P3"
-        ContentStory="Do you know the story of the Excalibur? That's the prestigious sword of Prince Arthur">
-    </Extensions:StoryContents>
 
     <ContentPage>
         <Extensions:QuestionsPageTemplate x:Name="Q1">
             <Extensions:QuestionsPageTemplate.Body>
                 <StackLayout>
-                    
+
                     <Extensions:OptionsStack x:Name="a1">
                         <Extensions:OptionsStack.GestureRecognizers>
                             <TapGestureRecognizer x:Name="_a1" Tapped="_a1_Tapped" />
                         </Extensions:OptionsStack.GestureRecognizers>
                     </Extensions:OptionsStack>
-                    
+
                     <Extensions:OptionsStack x:Name="b1">
                         <Extensions:OptionsStack.GestureRecognizers>
                             <TapGestureRecognizer x:Name="_b1" Tapped="_b1_Tapped" />
@@ -43,20 +37,19 @@
                             <TapGestureRecognizer x:Name="_c1" Tapped="_c1_Tapped" />
                         </Extensions:OptionsStack.GestureRecognizers>
                     </Extensions:OptionsStack>
-                    
-                </StackLayout>                
+
+                </StackLayout>
             </Extensions:QuestionsPageTemplate.Body>
-            
+
             <Extensions:QuestionsPageTemplate.Button>
                 <StackLayout>
                     <Button Style="{StaticResource buttonStyle}" x:Name="q1Button" Text="Submit" Clicked="q1Button_Clicked"/>
                 </StackLayout>
             </Extensions:QuestionsPageTemplate.Button>
-            
+
         </Extensions:QuestionsPageTemplate>
     </ContentPage>
-    
-    
+
 
     <ContentPage>
         <Extensions:QuestionsPageTemplate x:Name="Q2">
@@ -86,47 +79,11 @@
 
             <Extensions:QuestionsPageTemplate.Button>
                 <StackLayout>
-                    <Button Style="{StaticResource buttonStyle}" x:Name="q2Button" Text="Submit" Clicked="q2Button_Clicked"/>
+                    <Button Style="{StaticResource buttonStyle}" x:Name="q2Button" Text="Complete" Clicked="q2Button_Clicked"/>
                 </StackLayout>
             </Extensions:QuestionsPageTemplate.Button>
 
         </Extensions:QuestionsPageTemplate>
     </ContentPage>
-
-
-    <ContentPage>
-        <Extensions:QuestionsPageTemplate x:Name="Q3" >
-            <Extensions:QuestionsPageTemplate.Body>
-                <StackLayout x:Name="opSTACK3" IsEnabled="False">
-
-                    <Extensions:OptionsStack x:Name="a3">
-                        <Extensions:OptionsStack.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="_a3" Tapped="_a3_Tapped"/>
-                        </Extensions:OptionsStack.GestureRecognizers>
-                    </Extensions:OptionsStack>
-
-                    <Extensions:OptionsStack x:Name="b3">
-                        <Extensions:OptionsStack.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="_b3" Tapped="_b3_Tapped"/>
-                        </Extensions:OptionsStack.GestureRecognizers>
-                    </Extensions:OptionsStack>
-
-                    <Extensions:OptionsStack x:Name="c3">
-                        <Extensions:OptionsStack.GestureRecognizers>
-                            <TapGestureRecognizer x:Name="_c3" Tapped="_c3_Tapped"/>
-                        </Extensions:OptionsStack.GestureRecognizers>
-                    </Extensions:OptionsStack>
-
-                </StackLayout>
-            </Extensions:QuestionsPageTemplate.Body>
-
-            <Extensions:QuestionsPageTemplate.Button>
-                <StackLayout>
-                    <Button Style="{StaticResource buttonStyle}"  x:Name="q3Button" Text="Complete" Clicked="q3Button_Clicked"/>
-                </StackLayout>
-            </Extensions:QuestionsPageTemplate.Button>
-
-        </Extensions:QuestionsPageTemplate>
-    </ContentPage>  
 
 </CarouselPage>

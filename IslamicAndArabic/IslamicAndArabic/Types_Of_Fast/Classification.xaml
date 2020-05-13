@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Extensions="clr-namespace:IslamicAndArabic.Extensions"
+             mc:Ignorable="d"
+             x:Class="IslamicAndArabic.Types_Of_Fast.Classification"
+              Title="Types of Sawm"
+              Padding="15,20,15,15">
+
+    <ContentPage>
+        <Extensions:StoryPageTemplate ProgressBarValue="0.16">            
+            <Extensions:StoryPageTemplate.Body>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout>
+                        <Label Text="Voluntary and Involuntary Fasts" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+                        <Label FontSize="Medium" LineHeight="1.33"  LineBreakMode="WordWrap">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="There are different types of fasting and these can be broadly classified into 2 categories. They are: &#10;"/>
+                                    <Span FontAttributes="Italic"  FontSize="Medium" Text="- Voluntary, and &#10;"/>
+                                    <Span FontAttributes="Italic"  FontSize="Medium" Text="- Involuntary or Compulsory &#10;"/>
+                                    <Span Text="Involuntary fasts are often referred to as "/>
+                                    <Span FontAttributes="Bold"  FontSize="Medium" Text="Fard "/>
+                                    <Span Text="(religious duty commanded by "/>
+                                    <Span FontAttributes="Bold"  FontSize="Medium" TextColor="Black" Text="Allah (swt)"/>
+                                    <Span Text=") or "/>
+                                    <Span FontAttributes="Bold"  FontSize="Medium" Text="Wajib "/>
+                                    <Span Text="(an obligatory act, with failure to perform it being sinful). &#10;"/>
+                                    <Span Text="These 2 categories are regarded the same by the majority of the scholars. The involuntary fasts can further be divided into different categories based on time of observation. &#10;"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Padding="10" BackgroundColor="Wheat">
+                        <Label FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" FontSize="Medium" Text="Hint: "/>
+                                    <Span Text="If you believe, open your eyes." />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Extensions:StoryPageTemplate.Body>
+        </Extensions:StoryPageTemplate>
+    </ContentPage>
+
+    <ContentPage>
+        <Extensions:StoryPageTemplate ProgressBarValue="0.33">
+            <Extensions:StoryPageTemplate.Body>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout>
+                        <Label Text="Fard Muaiyyan and Fard Ghair Muaiyyan" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" ></Label>
+                        
+                        <Label FontSize="Medium" LineHeight="1.33"  LineBreakMode="WordWrap">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" Text="Fard Muaiyyan "/>
+                                    <Span Text="is a type of Fard al-Ayn (Personal Obligatory) fast which must be observed at a specific time and this is fasting throughout the month of Ramadan. This will be further addressed very soon, Insha'Allah. &#10;" />
+                                    <Span FontAttributes="Bold" Text="Fard Ghair Muaiyyan "/>
+                                    <Span Text="is another type of Fard al-Ayn but not entirely time bound as it is the type of obligatory fast which must be made to make up for a missed fard muaiyyan "/>
+                                    <Span FontAttributes="Italic" Text="i.e fast(s) missed during the month of Ramadan whether accidentally (Qada'), deliberately (Kaffarah) or with a valid reason (such as a traveller, the pregnant or breastfeeding mother or menstruating female).&#10;"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout
+                        Padding="10" BackgroundColor="Wheat">
+                        <Label FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" FontSize="Medium" Text="Hint: "/>
+                                    <Span Text="If you don't believe, close your eyes." />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Extensions:StoryPageTemplate.Body>
+            
+        </Extensions:StoryPageTemplate>
+    </ContentPage>
+
+    <ContentPage>
+        <Extensions:StoryPageTemplate ProgressBarValue="0.5">
+            <Extensions:StoryPageTemplate.Body>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout>
+                        <Label Text="Wajib Muaiyyan and Wajib Ghair Muaiyyan" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" ></Label>
+
+                        <Label FontSize="Medium" LineHeight="1.33"  LineBreakMode="WordWrap">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="A type of fast where one vows to keep a fast on a specific day or date in mind solely for the sake of Allah upon the fulfillment of a desire or a grant of a wish is known as "/>
+                                    <Span FontAttributes="Bold" Text="Wajib Muaiyyan. &#10;"/>
+                                    <Span Text="On the other hand, "/>
+                                    <Span FontAttributes="Bold" Text="Wajib Ghair Muaiyyan "/>
+                                    <Span Text="is a type of fast where one vows to keep a fast upon the fulfillment of a wish from Allah without setting any actual day or date in mind. &#10;"/>
+                                    <Span Text="Fast to make up for breaking one's oath (Qasm), missing Wajib Muaiyyan, Sunnah, Nafl or Kaffarah also fall under this category {Q5:89}.&#10;"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Padding="10" BackgroundColor="Wheat">
+                        <Label FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" FontSize="Medium" Text="Qur'an 5:89: "/>
+                                    <Span Text="Allah will not impose blame upon you for what is meaningless in your oaths, but He will impose blame upon you for [breaking] what you intended of oaths. So its expiation is the feeding of ten needy people from the average of that which you feed your [own] families or clothing them or the freeing of a slave. But whoever cannot find [or afford it] - then a fast of three days [is required]. That is the expiation for oaths when you have sworn. But guard your oaths. Thus does Allah make clear to you His verses that you may be grateful. &#10;" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>                
+            </Extensions:StoryPageTemplate.Body>
+
+        </Extensions:StoryPageTemplate>
+    </ContentPage>
+    
+    <!--
+    <ContentPage>
+        <Extensions:StoryPageTemplate ProgressBarValue="0.33">
+            <Extensions:StoryPageTemplate.Body>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout>
+                        <Label FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" ></Label>
+                        
+                        <Label FontSize="Medium" LineHeight="1.33"  LineBreakMode="WordWrap">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout> 
+                    <StackLayout
+                        Padding="10" BackgroundColor="Wheat">
+                        <Label FontSize="Medium">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" FontSize="Medium" Text="Hint: "/>
+                                    <Span Text="If you believe, open your eyes." />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Extensions:StoryPageTemplate.Body>
+            
+        </Extensions:StoryPageTemplate>
+    </ContentPage>
+    -->
+
+
+
+    <ContentPage>
+        <Extensions:QuestionsPageTemplate x:Name="Q1">
+            <Extensions:QuestionsPageTemplate.Body>
+                <StackLayout>
+
+                    <Extensions:OptionsStack x:Name="a1">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_a1" Tapped="_a1_Tapped" />
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="b1">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_b1" Tapped="_b1_Tapped" />
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="c1">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_c1" Tapped="_c1_Tapped" />
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Body>
+
+            <Extensions:QuestionsPageTemplate.Button>
+                <StackLayout>
+                    <Button Style="{StaticResource buttonStyle}" x:Name="q1Button" Text="Submit" Clicked="q1Button_Clicked"/>
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Button>
+
+        </Extensions:QuestionsPageTemplate>
+    </ContentPage>
+
+
+    <ContentPage>
+        <Extensions:QuestionsPageTemplate x:Name="Q2">
+            <Extensions:QuestionsPageTemplate.Body>
+                <StackLayout x:Name="opSTACK2" IsEnabled="False">
+
+                    <Extensions:OptionsStack x:Name="a2">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_a2" Tapped="_a2_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="b2" >
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_b2" Tapped="_b2_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="c2">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_c2" Tapped="_c2_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Body>
+
+            <Extensions:QuestionsPageTemplate.Button>
+                <StackLayout>
+                    <Button Style="{StaticResource buttonStyle}" x:Name="q2Button" Text="Submit" Clicked="q2Button_Clicked"/>
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Button>
+
+        </Extensions:QuestionsPageTemplate>
+    </ContentPage>
+
+
+    <ContentPage>
+        <Extensions:QuestionsPageTemplate x:Name="Q3" >
+            <Extensions:QuestionsPageTemplate.Body>
+                <StackLayout x:Name="opSTACK3" IsEnabled="False">
+
+                    <Extensions:OptionsStack x:Name="a3">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_a3" Tapped="_a3_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="b3">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_b3" Tapped="_b3_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                    <Extensions:OptionsStack x:Name="c3">
+                        <Extensions:OptionsStack.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="_c3" Tapped="_c3_Tapped"/>
+                        </Extensions:OptionsStack.GestureRecognizers>
+                    </Extensions:OptionsStack>
+
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Body>
+
+            <Extensions:QuestionsPageTemplate.Button>
+                <StackLayout>
+                    <Button Style="{StaticResource buttonStyle}"  x:Name="q3Button" Text="Complete" Clicked="q3Button_Clicked"/>
+                </StackLayout>
+            </Extensions:QuestionsPageTemplate.Button>
+
+        </Extensions:QuestionsPageTemplate>
+    </ContentPage>
+
+</CarouselPage>

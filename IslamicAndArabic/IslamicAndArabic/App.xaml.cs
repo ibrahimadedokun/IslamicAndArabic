@@ -1,5 +1,6 @@
 ﻿using IslamicAndArabic.Extensions;
 using IslamicAndArabic.FirstView;
+using IslamicAndArabic.Types_Of_Fast;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -46,7 +47,7 @@ namespace IslamicAndArabic
             {
                 if (isComplete)
                 {
-                    Application.Current?.MainPage?.DisplayAlert("Success", "You Passed this Chapter", "Proceed to Next Chapter");
+                    Application.Current?.MainPage?.DisplayAlert("Success", "You Passed this Chapter", "Proceed");                      
                     //DisplayAlert("Success", "You Passed this Chapter", "Proceed to Next Chapter");
                     return;
                 }

@@ -7750,13 +7750,13 @@ namespace IslamicAndArabic.Droid
 			public const int notify_panel_notification_icon_bg = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int tooltip_frame_dark = 2131165300;
+			public const int solace_logo_480 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int tooltip_frame_light = 2131165301;
+			public const int tooltip_frame_dark = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int transparentIslamicLogo = 2131165302;
+			public const int tooltip_frame_light = 2131165302;
 			
 			static Drawable()
 			{
@@ -8724,7 +8724,7 @@ namespace IslamicAndArabic.Droid
 			public const int launcher_foreground = 2131492866;
 			
 			// aapt resource value: 0x7F0C0003
-			public const int myIAlogo = 2131492867;
+			public const int solace_logo = 2131492867;
 			
 			static Mipmap()
 			{

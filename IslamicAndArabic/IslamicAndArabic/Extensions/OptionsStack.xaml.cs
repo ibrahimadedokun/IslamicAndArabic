@@ -1,11 +1,10 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace IslamicAndArabic.Extensions
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [Preserve(AllMembers = true)]
     public partial class OptionsStack : StackLayout
     {       
         public static readonly BindableProperty OptionProperty =

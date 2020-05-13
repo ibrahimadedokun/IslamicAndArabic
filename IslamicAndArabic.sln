@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IslamicAndArabic.Android", "IslamicAndArabic\IslamicAndArabic.Android\IslamicAndArabic.Android.csproj", "{4FCA80C7-310C-49AC-9B5B-A8AAF0AF1F7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IslamicAndArabic", "IslamicAndArabic\IslamicAndArabic\IslamicAndArabic.csproj", "{6A8E3448-A182-4A54-B6C1-0D4E0F6BC09B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IslamicAndArabic", "IslamicAndArabic\IslamicAndArabic\IslamicAndArabic.csproj", "{6A8E3448-A182-4A54-B6C1-0D4E0F6BC09B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

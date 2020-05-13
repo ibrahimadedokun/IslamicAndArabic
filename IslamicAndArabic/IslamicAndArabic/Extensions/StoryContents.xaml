@@ -16,28 +16,39 @@
 
         <myLocal:BackgroundImage/>
 
-        <ProgressBar IsVisible="True" Progress="{Binding ProgressBarValue}"
-                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+        <ProgressBar x:Name="pageBar"
+            IsVisible="True" Progress="{Binding ProgressBarValue}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
 
         <ScrollView 
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=pageBar, Property=Height, Factor=1, Constant=5}">
             
             <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
                 
                 <StackLayout Orientation="Vertical"
-                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}"
                              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
 
-                    <Label Text="{Binding StoryTitle}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding StoryTitle}" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
-                    <Label Text="{Binding ContentStory}"/>
+                    <Label Text="{Binding ContentStory}" FontSize="Large" LineHeight="1.33" LineBreakMode="WordWrap"/>
+
+                    <StackLayout
+                        Padding="10" BackgroundColor="Wheat" HeightRequest="50">
+                        <Label>
+                            <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Hint: " FontAttributes="Bold" />
+                                <Span Text="If you believe, open your eyes." />
+                                </FormattedString>
+                        </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
 
                 </StackLayout>
                 
-            </RelativeLayout>
-
-            
+            </RelativeLayout>            
 
         </ScrollView>
 

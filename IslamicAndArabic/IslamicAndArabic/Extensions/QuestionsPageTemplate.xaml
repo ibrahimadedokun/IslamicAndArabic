@@ -15,16 +15,17 @@
             <Extensions:BackgroundImage/>
 
             <ProgressBar x:Name="ProgressBarValue" IsVisible="True" 
-                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}"/>
            
             <ScrollView
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}">
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=ProgressBarValue, Property=Height, Factor=1, Constant=5}">
 
                 <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
 
-                    <Label x:Name="Question"/>
+                    <Label x:Name="Question" FontSize="Large" FontFamily="{StaticResource Quicksand-Med}"/>
 
                     <!--This content view should have a stack layout of options stack-->
                     <ContentView x:Name="OptionsBodyContent"
@@ -37,7 +38,6 @@
                     <ContentView x:Name="PageButtonSection"
                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-
                     </ContentView>
 
                 </RelativeLayout>

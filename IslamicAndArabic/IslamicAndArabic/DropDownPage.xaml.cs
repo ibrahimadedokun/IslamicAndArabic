@@ -1,14 +1,9 @@
-﻿using IslamicAndArabic.MarkupExtensions;
-using NodaTime;
-using System;
+﻿using System;
 using System.Globalization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using IslamicAndArabic.Types_Of_Fast;
 
 namespace IslamicAndArabic
 {
@@ -40,6 +35,7 @@ namespace IslamicAndArabic
             */
 
             HijriCalendar islamicCalendar = new HijriCalendar();
+            islamicCalendar.HijriAdjustment = -1;
             myIslamicDate.Text = islamicMonth(islamicCalendar.GetMonth(DateTime.Now))
                 + " " + islamicCalendar.GetDayOfMonth(DateTime.Now).ToString()
                 + ", " + islamicCalendar.GetYear(DateTime.Now).ToString() + "AH";
@@ -232,12 +228,12 @@ namespace IslamicAndArabic
 
         async private void secondOne_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushAsync(new Classification());
         }
 
         async private void secondTwo_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page());
+            await Navigation.PushAsync(new Voluntary());
         }
 
         async private void secondThree_Tapped(object sender, EventArgs e)

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace IslamicAndArabic.FirstView
 {
@@ -15,7 +12,7 @@ namespace IslamicAndArabic.FirstView
             var splashContainer = new AbsoluteLayout();
             SplashImage = new Image
             {
-                Source = "transparentIslamicLogo.png"
+                Source = "solace_logo_480.png"
             };
             AbsoluteLayout.SetLayoutFlags(SplashImage, AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(SplashImage, new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
@@ -27,9 +24,9 @@ namespace IslamicAndArabic.FirstView
         {
             base.OnAppearing();
 
-            await SplashImage.ScaleTo(0.5, 1000);
-            await SplashImage.ScaleTo(1, 1000, Easing.Linear);
-            await SplashImage.ScaleTo(0.5, 800, Easing.Linear);
+            await SplashImage.ScaleTo(0.5, 750);
+            await SplashImage.ScaleTo(1, 500, Easing.Linear);
+            await SplashImage.ScaleTo(0.5, 750, Easing.Linear);
 
             Application.Current.MainPage = new NavigationPage(new DropDownPage());
         }

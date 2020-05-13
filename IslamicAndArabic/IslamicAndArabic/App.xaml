@@ -7,12 +7,18 @@
              x:Class="IslamicAndArabic.App">
     <Application.Resources>
         <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Amatic-Reg">
+                <On Platform="Android" Value="AmaticSC-Regular.ttf#AmaticSC"/>
+            </OnPlatform>
+            
+            <OnPlatform x:TypeArguments="x:String" x:Key="Quicksand-Med">
+                <On Platform="Android" Value="Quicksand-Medium.ttf#Quicksand"/>
+            </OnPlatform>
             <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="CornerRadius" Value="10"/>
                 <Setter Property="BackgroundColor" Value="#9E9E9E"/>
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand-Med}"/>
             </Style>
-
-            
         </ResourceDictionary>
         
     </Application.Resources>

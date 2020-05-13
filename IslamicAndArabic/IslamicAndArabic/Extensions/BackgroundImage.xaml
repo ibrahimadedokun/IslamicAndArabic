@@ -7,8 +7,8 @@
              mc:Ignorable="d"
              x:Class="IslamicAndArabic.Extensions.BackgroundImage"
           
-       x:Name="bgTrans"  Aspect="AspectFit" Opacity="0.1"
-            Source="{local:EmbeddedImage IslamicAndArabic.images.transparentIslamicLogo.png}"
+       x:Name="bgTrans"  Aspect="AspectFit" Opacity="0.05"
+            Source="{local:EmbeddedImage IslamicAndArabic.images.solace_logo_480.png}"
                  RelativeLayout.YConstraint="{ConstraintExpression
             Type=RelativeToParent,
             Property=Height, Factor=0.25}"

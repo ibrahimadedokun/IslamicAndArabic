@@ -19,21 +19,22 @@
                 <Setter Property="BackgroundColor" Value="#795548"/>
                 <Setter Property="CornerRadius" Value="15"/>
                 <Setter Property="TextColor" Value="Wheat"/>
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand-Med}"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
     <RelativeLayout >
         
-        <StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}">
-            <Label x:Name="myIslamicDate" FontSize="Body" FontAttributes="Bold" TextColor="Black"/>            
+        <StackLayout x:Name="date" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Label x:Name="myIslamicDate" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="Black" FontFamily="{StaticResource Quicksand-Med}"/>            
         </StackLayout>
 
         <myLocal:BackgroundImage/>
         
         <ScrollView 
             Padding="20,0,20,20"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.04}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=date, Property=Height, Factor=1, Constant=15}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
             
@@ -42,8 +43,7 @@
                     <!--#region First Division-->
                     <StackLayout>
                     <Button ImageSource="{local:EmbeddedImage IslamicAndArabic.images.plus64px.png}"
-                        Style="{StaticResource dropDownButtonStyle}" x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" /> 
-                        
+                        Style="{StaticResource dropDownButtonStyle}" x:Name="firstButton" Text="Introduction" Clicked="firstButton_Clicked" />                         
                     </StackLayout>
                     <myLocal:MyStackLayout x:Name="firstStackOne" TabDescription="Definition" IsVisible="False" >
                         <myLocal:MyStackLayout.GestureRecognizers>
